@@ -164,6 +164,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
 }
 .mnav{display:none;gap:14px;font-family:var(--mono);font-size:13px;letter-spacing:.1em;text-transform:uppercase}
 .mnav a{color:var(--bolt);text-decoration:none}
+@media (max-width:640px){.links{grid-template-columns:repeat(2,minmax(0,1fr))}.links small{display:none}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
 </style>
 </head>
@@ -240,16 +241,25 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
       </ul>
     </div>
     <div class="stack">
-      <h3>Listen and follow</h3>
+      <h3>Listen</h3>
       <div class="links">
         <a href="https://open.spotify.com/artist/06FXFjpUdZuvJ5pjxGCUZX" target="_blank" rel="noopener">Spotify <small>stream</small></a>
+        <a href="https://music.apple.com/us/album/1827108426" target="_blank" rel="noopener">Apple Music <small>stream</small></a>
+        <a href="https://music.youtube.com/playlist?list=OLAK5uy_ntbTG-GPuOCy8UfGNeYt0kJz0Nw2C48Ko" target="_blank" rel="noopener">YouTube Music <small>stream</small></a>
+        <a href="https://music.amazon.com/albums/B0FHPCH39C" target="_blank" rel="noopener">Amazon Music <small>stream</small></a>
+        <a href="https://listen.tidal.com/album/448305252" target="_blank" rel="noopener">TIDAL <small>stream</small></a>
+        <a href="https://www.deezer.com/album/788811051" target="_blank" rel="noopener">Deezer <small>stream</small></a>
+        <a href="https://www.pandora.com/AL:50827549" target="_blank" rel="noopener">Pandora <small>stream</small></a>
+        <a href="https://album.link/s/3ZOswPtTcg4spDXB93qJYO" target="_blank" rel="noopener">Every platform <small>album.link</small></a>
+      </div>
+      <h3 style="margin-top:10px">Follow</h3>
+      <div class="links">
         <a href="https://www.youtube.com/@twisteddragon764" target="_blank" rel="noopener">YouTube <small>watch</small></a>
         <a href="https://www.instagram.com/twisteddragonrocks" target="_blank" rel="noopener">Instagram <small>@twisteddragonrocks</small></a>
         <a href="https://www.facebook.com/twisteddragonmusic" target="_blank" rel="noopener">Facebook <small>/twisteddragonmusic</small></a>
         <a href="https://www.tiktok.com/@twisteddragonrocks" target="_blank" rel="noopener">TikTok <small>@twisteddragonrocks</small></a>
         <a href="https://linktr.ee/twisteddragonband" target="_blank" rel="noopener">All links <small>linktr.ee</small></a>
       </div>
-      <p class="muted" style="font-size:15px">Also on Apple Music, Tidal and every major platform.</p>
     </div>
   </div>
 </section>
