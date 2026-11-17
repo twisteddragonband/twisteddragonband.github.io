@@ -89,6 +89,10 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .stub .with{color:var(--smoke)}
 .meta{display:flex;flex-wrap:wrap;gap:4px 18px;font-family:var(--mono);font-size:13px;color:var(--smoke);margin-top:6px}
 
+.stub + .stub{border-top:1px solid var(--ash)}
+.empty{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding-block:28px}
+.empty p{color:var(--smoke)}
+
 /* MUSIC */
 .album{display:grid;grid-template-columns:minmax(0,1fr);gap:20px}
 .disc{list-style:none;margin:0;padding:0;border-top:1px solid var(--ash)}
@@ -202,6 +206,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
 
 <section class="next" id="shows" style="padding-block:0">
   <div class="wrap">
+<!-- SHOWS:START  Updated by the weekly "TD Website Shows" scheduled task from TD - Booking & Shows > Shows (green = confirmed). One .stub per confirmed upcoming show, soonest first; the first one's kicker says "Next show", the rest say "Upcoming". With no confirmed upcoming shows, use the .empty block instead. Edit only between these markers. -->
     <div class="stub">
       <div class="date" aria-label="Sunday, November 22, 2026"><span class="m">Nov</span><span class="d">22</span><span class="w">Sun</span></div>
       <div class="stack" style="gap:2px">
@@ -214,6 +219,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
         <a class="btn hot" href="https://www.therecordbar.com/shows/3-years-hollow-w-trackside-22-nov" target="_blank" rel="noopener">Get tickets</a>
       </div>
     </div>
+<!-- SHOWS:END -->
   </div>
 </section>
 
