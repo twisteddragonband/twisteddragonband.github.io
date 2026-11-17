@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Twisted Dragon Press Kit">
+<meta property="og:image" content="https://twisteddragon.rocks/img/alley.jpg">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Twisted Dragon Press Kit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one long press sheet. Full-bleed photo hero, then numbered-free bands that alternate soot and amp-tolex, single column on phones. Committed dark look (stage at night). */
+:root{
+  --soot:#120e0d;        /* page ground */
+  --tolex:#1c1614;       /* raised band */
+  --ash:#2b2320;         /* lines */
+  --bone:#f3ebe1;        /* text */
+  --smoke:#b9aca0;       /* muted text */
+  --dragon:#e0283f;      /* brand red, lifted for dark ground */
+  --bolt:#fdcb45;        /* brand yellow */
+  --ember:#e9683a;
+  --display:"Anton","Impact","Arial Narrow Bold",sans-serif;
+  --body:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--soot);color:var(--bone);font-family:var(--body);font-size:17px;line-height:1.6;margin:0}
+a{color:var(--bolt)}
+a:hover{color:#fff}
+:focus-visible{outline:2px solid var(--bolt);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+section{padding-block:72px}
+section.alt{background:var(--tolex)}
+h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:.02em;line-height:1.05;text-wrap:balance;margin:0}
+h2{font-size:clamp(34px,5vw,54px);text-transform:uppercase}
+h3{font-size:22px;text-transform:uppercase;letter-spacing:.04em}
+.kicker{font-family:var(--mono);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--bolt);margin:0 0 10px}
+p{margin:0}
+.muted{color:var(--smoke)}
+
+/* HERO */
+.hero{position:relative;background:var(--soot);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:40px;align-items:center;padding-block:48px 64px}
+.hero-photo{position:relative;max-width:100%}
+.hero-photo img{display:block;width:100%;height:auto;aspect-ratio:1714/2576;object-fit:cover;max-height:78vh;border:1px solid var(--ash)}
+.credit{font-family:var(--mono);font-size:11px;color:var(--smoke);margin-top:8px;letter-spacing:.04em}
+.hero-copy{display:flex;flex-direction:column;gap:22px;min-width:0}
+.hero-copy .logo{width:100%;max-width:520px;height:auto}
+.tag{font-family:var(--display);font-size:clamp(26px,3.4vw,38px);text-transform:uppercase;line-height:1.1}
+.tag span{color:var(--dragon)}
+.fans{color:var(--smoke)}
+.fans b{color:var(--bone);font-weight:600}
+.ctas{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:0 18px;border:2px solid var(--bone);color:var(--bone);text-decoration:none;font-weight:700;font-size:15px;letter-spacing:.06em;text-transform:uppercase}
+.btn:hover{background:var(--bone);color:var(--soot)}
+.btn.hot{background:var(--dragon);border-color:var(--dragon);color:#fff}
+.btn.hot:hover{background:var(--bolt);border-color:var(--bolt);color:var(--soot)}
+
+/* FACT STRIP */
+.facts{border-top:1px solid var(--ash);border-bottom:1px solid var(--ash);background:var(--tolex)}
+.facts dl{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));margin:0}
+.facts div{padding:18px 14px;border-left:1px solid var(--ash);min-width:0}
+.facts div:first-child{border-left:0}
+.facts dt{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--smoke)}
+.facts dd{margin:4px 0 0;font-weight:600;font-size:16px;line-height:1.3}
+
+/* TWO-COL */
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:start}
+.stack{display:flex;flex-direction:column;gap:18px;min-width:0}
+.prose{max-width:62ch;display:flex;flex-direction:column;gap:16px}
+
+/* LIVE */
+.live-fig{position:relative;margin:0}
+.live-fig img{display:block;width:100%;height:auto;border:1px solid var(--ash)}
+.play{position:absolute;left:16px;bottom:16px;display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 18px;background:var(--dragon);color:#fff;text-decoration:none;font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:15px}
+.play:hover{background:var(--bolt);color:var(--soot)}
+.play svg{width:18px;height:18px}
+.vids{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--mono);font-size:14px}
+.stat{display:flex;gap:28px;flex-wrap:wrap;padding-top:6px}
+.stat div{display:flex;flex-direction:column}
+.stat b{font-family:var(--display);font-weight:400;font-size:48px;line-height:1;color:var(--bolt);font-variant-numeric:tabular-nums}
+.stat span{font-size:14px;color:var(--smoke)}
+
+/* BIOS */
+.bios{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+.bio{border:1px solid var(--ash);padding:18px;display:flex;flex-direction:column;gap:12px;min-width:0;background:var(--soot)}
+.bio header{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.bio .use{font-family:var(--mono);font-size:12px;color:var(--smoke);letter-spacing:.06em}
+.copy{min-height:36px;padding:0 12px;background:transparent;border:1px solid var(--smoke);color:var(--bone);font:600 13px var(--body);letter-spacing:.06em;text-transform:uppercase;cursor:pointer}
+.copy:hover{border-color:var(--bolt);color:var(--bolt)}
+
+/* MUSIC */
+.discog{list-style:none;margin:0;padding:0;border-top:1px solid var(--ash)}
+.discog li{display:grid;grid-template-columns:130px minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--ash)}
+.discog time{font-family:var(--mono);font-size:14px;color:var(--smoke);font-variant-numeric:tabular-nums}
+.discog b{font-weight:700}
+.songs{display:flex;flex-wrap:wrap;gap:8px}
+.songs span{border:1px solid var(--ember);color:var(--bone);padding:6px 12px;font-weight:600;font-size:15px}
+.links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.links a{display:flex;justify-content:space-between;align-items:center;gap:10px;min-height:52px;padding:0 16px;border:1px solid var(--ash);background:var(--soot);color:var(--bone);text-decoration:none;font-weight:600}
+.links a:hover{border-color:var(--bolt);color:var(--bolt)}
+.links small{font-family:var(--mono);font-size:12px;color:var(--smoke);font-weight:400}
+
+/* SHOWS */
+.shows{width:100%;border-collapse:collapse;font-size:16px}
+.shows th{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--smoke);text-align:left;font-weight:500;padding:0 12px 10px 0;border-bottom:1px solid var(--ash)}
+.shows td{padding:14px 12px 14px 0;border-bottom:1px solid var(--ash);vertical-align:top}
+.shows td:first-child{font-family:var(--mono);font-variant-numeric:tabular-nums;color:var(--smoke);white-space:nowrap}
+.tablebox{overflow-x:auto}
+
+/* PHOTOS */
+.photos{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);grid-template-rows:auto auto;gap:16px}
+.photos figure{margin:0;display:flex;flex-direction:column;min-width:0}
+.photos img{display:block;width:100%;height:auto;border:1px solid var(--ash)}
+.photos .tall{grid-row:span 2}
+.photos .tall img{height:100%;object-fit:cover}
+.photos figcaption{display:flex;justify-content:space-between;gap:10px;font-family:var(--mono);font-size:12px;color:var(--smoke);margin-top:8px;flex-wrap:wrap}
+
+/* TECH */
+.plot{margin:0;background:#fff;border:1px solid var(--ash)}
+.plot img{display:block;width:100%;height:auto}
+.specs{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px}
+.specs li{display:grid;grid-template-columns:150px minmax(0,1fr);gap:12px;padding:12px 0;border-bottom:1px solid var(--ash)}
+.specs b{font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--bolt);padding-top:2px}
+
+/* CONTACT */
+.contact{background:var(--dragon);color:#fff}
+.contact .kicker{color:var(--soot)}
+.contact a{color:#fff}
+.contact-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:40px;align-items:end}
+.contact h2{font-size:clamp(40px,7vw,84px)}
+.card{display:flex;flex-direction:column;gap:10px;font-size:18px}
+.card .row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.card .val{font-weight:700;user-select:all}
+.contact .copy{border-color:#fff;color:#fff}
+.contact .copy:hover{background:#fff;color:var(--dragon)}
+footer{padding-block:28px;font-family:var(--mono);font-size:12px;color:var(--smoke)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+@media (max-width:900px){
+  .hero-grid,.split,.contact-grid{grid-template-columns:minmax(0,1fr)}
+  .hero-photo img{max-height:none}
+  .facts dl{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .facts div:nth-child(4){border-left:0}
+  .facts div:nth-child(n+4){border-top:1px solid var(--ash)}
+  .specs{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:640px){
+  section{padding-block:52px}
+  .facts dl{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .facts div{border-left:0!important;border-top:1px solid var(--ash)}
+  .facts div:nth-child(-n+2){border-top:0}
+  .facts div:nth-child(even){border-left:1px solid var(--ash)!important}
+  .bios,.links{grid-template-columns:minmax(0,1fr)}
+  .photos{grid-template-columns:minmax(0,1fr)}
+  .photos .tall{grid-row:auto}
+  .discog li{grid-template-columns:minmax(0,1fr);gap:2px}
+  .specs li{grid-template-columns:minmax(0,1fr);gap:2px}
+}
+.topbar{border-bottom:1px solid var(--ash);background:var(--soot)}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:52px;font-family:var(--mono);font-size:13px;letter-spacing:.1em;text-transform:uppercase}
+.topbar a{color:var(--smoke);text-decoration:none}.topbar a:hover{color:var(--bolt)}
+/* (clickable) tag on every button */
+.btn::after,.play::after,.copy::after{content:"(clickable)";font-family:var(--mono);font-size:11px;font-weight:400;letter-spacing:.02em;text-transform:none;opacity:.8}
+.copy::after{margin-left:6px}
+.links a small::after{content:" · (clickable)"}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<nav class="topbar" aria-label="Site"><div class="wrap"><a href="index.html">← Twisted Dragon home</a><span class="muted">Press kit</span></div></nav>
+
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <figure class="hero-photo" style="margin:0">
+      <img src="img/alley.jpg" alt="Twisted Dragon, the three members standing in a dim alley at night under a streetlight" width="1331" height="2000">
+      <figcaption class="credit">Photo: Joey Elifrits</figcaption>
+    </figure>
+    <div class="hero-copy">
+      <h1 style="margin:0"><img class="logo" src="img/logo.png" alt="Twisted Dragon" width="1400" height="1070"></h1>
+      <p class="tag">Blues hard rock from Kansas City. <span>'70s soul, modern punch.</span></p>
+      <p class="fans">For fans of <b>Royal Blood</b>, <b>Queens of the Stone Age</b>, <b>Wolfmother</b>, and <b>Crobot</b>.</p>
+      <div class="ctas">
+        <a class="btn hot" href="https://drive.google.com/file/d/1-t_deZXCTcsvWy8wCoaoUx_sxY7vRu-M/view" target="_blank" rel="noopener">Watch live</a>
+        <a class="btn" href="https://open.spotify.com/artist/06FXFjpUdZuvJ5pjxGCUZX" target="_blank" rel="noopener">Listen</a>
+        <a class="btn" href="#booking">Book the band</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="facts">
+  <div class="wrap">
+    <dl>
+      <div><dt>Home</dt><dd>Kansas City metro</dd></div>
+      <div><dt>Lineup</dt><dd>Three-piece</dd></div>
+      <div><dt>Formed</dt><dd>2017</dd></div>
+      <div><dt>Latest album</dt><dd>Long Live Rock and Roll</dd></div>
+      <div><dt>Set length</dt><dd>Up to 45 min, all originals</dd></div>
+      <div><dt>Changeover</dt><dd>15 min with line check</dd></div>
+    </dl>
+  </div>
+</div>
+
+<section id="live">
+  <div class="wrap split">
+    <div class="stack">
+      <p class="kicker">Live</p>
+      <h2>Back on stage, louder</h2>
+      <div class="prose">
+        <p>After three years away, Twisted Dragon returned as a three-piece on October 16, 2026, headlining a five-band, all-ages bill at Westport Bowery in Kansas City.</p>
+        <p>The band carries its own in-ear rack and kit-mounted lighting rig, runs backing layers from Ableton, and turns the stage over in about 15 minutes.</p>
+      </div>
+      <div class="stat">
+        <div><b>75</b><span>through the door, Return show</span></div>
+        <div><b>5</b><span>bands on the bill</span></div>
+      </div>
+      <div class="vids"><span class="muted">"Mona," live:</span>
+        <a href="https://drive.google.com/file/d/1-t_deZXCTcsvWy8wCoaoUx_sxY7vRu-M/view" target="_blank" rel="noopener">Landscape (16:9)</a>
+        <a href="https://drive.google.com/file/d/1Qn9k1_MJsGPIOnEtorYO2fzA-UuCR5WW/view" target="_blank" rel="noopener">Vertical (9:16)</a>
+      </div>
+    </div>
+    <figure class="live-fig">
+      <div style="position:relative"><img src="img/live.jpg" alt="Twisted Dragon performing under red and teal stage light at Westport Bowery" width="2000" height="1333">
+      <a class="play" href="https://drive.google.com/file/d/1-t_deZXCTcsvWy8wCoaoUx_sxY7vRu-M/view" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4l13 8-13 8z" fill="currentColor"/></svg>Play "Mona" live</a></div>
+      <figcaption class="credit">Westport Bowery, Kansas City · Oct 16, 2026 · Photo and video: Kayla Hayden</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="alt" id="story">
+  <div class="wrap split">
+    <div class="stack">
+      <p class="kicker">The story</p>
+      <h2>A name taken from their own song</h2>
+      <div class="prose">
+        <p>Twisted Dragon is a blues hard rock band from the Kansas City metro, trading in thunderous grooves, fuzz-soaked riffs and the raw swagger of '70s rock.</p>
+        <p>The band formed around 2017 as Skewer. After a cease and desist forced a name change, they took the name of one of their own songs, a track about a fictional nightclub called Twisted Dragon. Founders Garrett Kleitz and William "Lightning" Keen spent the next several years writing and self-producing a four-part EP series (Leave Your Mind, Free Your Body, Give Your Soul and Long Live Rock and Roll), released together as the album Long Live Rock and Roll in 2025, followed by the single "Delirium."</p>
+        <p>In 2023 the band expanded with Dawson Kleitz and Benjamin Blevins, then stepped back while members pursued other projects. In October 2026, Twisted Dragon returned as a three-piece with a high-energy comeback show at Westport Bowery, and is now writing new material.</p>
+      </div>
+    </div>
+    <div class="stack">
+      <h3>The band</h3>
+      <ul class="discog" style="margin-bottom:8px">
+        <li><time>Vocals, guitar</time><span><b>William "Lightning" Keen</b></span></li>
+        <li><time>Bass</time><span><b>Dawson Kleitz</b></span></li>
+        <li><time>Drums, vocals</time><span><b>Garrett Kleitz</b></span></li>
+      </ul>
+      <h3>Ready-to-use bios</h3>
+      <div class="bios">
+        <article class="bio">
+          <header><span class="use">Short · listings, socials</span><button class="copy" type="button" data-copy="bio-short">Copy</button></header>
+          <p id="bio-short">Blues hard rock from Kansas City. '70s soul, modern punch. Long Live Rock and Roll.</p>
+        </article>
+        <article class="bio">
+          <header><span class="use">Medium · press, event pages</span><button class="copy" type="button" data-copy="bio-medium">Copy</button></header>
+          <p id="bio-medium">Twisted Dragon is a blues hard rock band from Kansas City, delivering gritty, overdriven riffs rooted in the '70s and built for today. For fans of Royal Blood, Queens of the Stone Age, Wolfmother, and Crobot. After a three-year break, the band returned in 2026 louder than ever.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="music">
+  <div class="wrap split">
+    <div class="stack">
+      <p class="kicker">Music</p>
+      <h2>Start here</h2>
+      <div class="songs"><span>Midnight Hour</span><span>Wasting</span><span>Mona</span><span>Never Coming Back</span></div>
+      <ul class="discog">
+        <li><time>Aug 8, 2025</time><span><b>Delirium</b> · single</span></li>
+        <li><time>Jul 18, 2025</time><span><b>Long Live Rock and Roll</b> · album, 12 tracks (the four-EP series in one)</span></li>
+        <li><time>Oct 18, 2022</time><span><b>The Ride</b> · David Allan Coe cover</span></li>
+        <li><time>2021–2022</time><span><b>Leave Your Mind → Free Your Body → Give Your Soul → Long Live Rock and Roll</b> · EP series</span></li>
+      </ul>
+      <p class="muted" style="font-size:15px">Masters and publishing owned by the band. BMI.</p>
+    </div>
+    <div class="stack">
+      <h3>Listen, watch, follow</h3>
+      <div class="links">
+        <a href="https://linktr.ee/twisteddragonband" target="_blank" rel="noopener">All links <small>linktr.ee</small></a>
+        <a href="https://open.spotify.com/artist/06FXFjpUdZuvJ5pjxGCUZX" target="_blank" rel="noopener">Spotify <small>stream</small></a>
+        <a href="https://www.youtube.com/@twisteddragon764" target="_blank" rel="noopener">YouTube <small>watch</small></a>
+        <a href="https://www.instagram.com/twisteddragonrocks" target="_blank" rel="noopener">Instagram <small>@twisteddragonrocks</small></a>
+        <a href="https://www.facebook.com/twisteddragonmusic" target="_blank" rel="noopener">Facebook <small>/twisteddragonmusic</small></a>
+        <a href="https://www.tiktok.com/@twisteddragonrocks" target="_blank" rel="noopener">TikTok <small>@twisteddragonrocks</small></a>
+      </div>
+      <h3 style="margin-top:18px">Recent shows</h3>
+      <div class="tablebox">
+        <table class="shows">
+          <thead><tr><th>Date</th><th>Show</th></tr></thead>
+          <tbody>
+            <tr><td>Oct 23, 2026</td><td>Fuego, Kansas City · acoustic set, "Monsters, Masks, and Mystery"</td></tr>
+            <tr><td>Oct 16, 2026</td><td>Westport Bowery, Kansas City · The Return of Twisted Dragon, headliner, five-band bill</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="photos">
+  <div class="wrap stack" style="gap:24px">
+    <div class="stack" style="gap:8px">
+      <p class="kicker">Press photos</p>
+      <h2>Use these</h2>
+      <p class="muted">Please credit the photographer. Full-size files are in the press folder below.</p>
+    </div>
+    <div class="photos">
+      <figure class="tall"><img src="img/alley.jpg" alt="Band portrait in an alley at night" width="1331" height="2000" loading="lazy"><figcaption><span>Main press photo · vertical</span><span>Photo: Joey Elifrits</span></figcaption></figure>
+      <figure><img src="img/stage.jpg" alt="The three members posing on stage, drummer holding crossed sticks" width="2000" height="1333" loading="lazy"><figcaption><span>Landscape · event headers</span><span>Photo: Kayla Hayden</span></figcaption></figure>
+      <figure><img src="img/live.jpg" alt="Live at Westport Bowery" width="2000" height="1333" loading="lazy"><figcaption><span>Live · Westport Bowery</span><span>Photo: Kayla Hayden</span></figcaption></figure>
+    </div>
+    <div class="ctas"><a class="btn" href="https://drive.google.com/drive/folders/14qsvSzc7N8U6uwWW6eL0W0Huc7h3eLVF" target="_blank" rel="noopener">Open press folder: photos, logos, stage plot</a></div>
+  </div>
+</section>
+
+<section id="tech">
+  <div class="wrap stack" style="gap:28px">
+    <div class="stack" style="gap:8px">
+      <p class="kicker">For the production team</p>
+      <h2>Stage plot and tech</h2>
+    </div>
+    <figure class="plot"><img src="img/stageplot.jpg" alt="Twisted Dragon stage plot and 13-channel input list" width="2200" height="1700" ></figure>
+    <div class="ctas"><a class="btn hot" href="https://drive.google.com/file/d/1rPSEwNV2uNIUMPdGWDBpTvixqTdDfX0S/view" target="_blank" rel="noopener">Stage plot and input list (PDF)</a></div>
+    <ul class="specs">
+      <li><b>Inputs</b><span>13 channels; band split feeds FOH; bass DI at Dawson's pedalboard</span></li>
+      <li><b>Monitors</b><span>Own in-ear rack; house wedges as backup only</span></li>
+      <li><b>Power</b><span>Upstage left and right, downstage left and right</span></li>
+      <li><b>Lighting</b><span>Kit-mounted rig; house haze, plus house lights if available</span></li>
+      <li><b>Drums</b><span>Our kit preferred and shareable on multi-band bills</span></li>
+      <li><b>Changeover</b><span>15 min with line check, 10 if the stage clears fast</span></li>
+      <li><b>Merch</b><span>Table at least 4 ft × 3 ft with power</span></li>
+      <li><b>Party</b><span>3 band members</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="contact" id="booking">
+  <div class="wrap contact-grid">
+    <div class="stack">
+      <p class="kicker">Booking</p>
+      <h2>Long Live Rock and Roll</h2>
+    </div>
+    <div class="card">
+      <div class="row"><span class="val">Garrett Kleitz</span></div>
+      <div class="row"><span class="val" id="c-email">twisteddragonband@gmail.com</span><button class="copy" type="button" data-copy="c-email">Copy</button></div>
+      <div class="row"><span class="val" id="c-phone">785-218-8793</span><button class="copy" type="button" data-copy="c-phone">Copy</button></div>
+      <div class="row"><a href="https://linktr.ee/twisteddragonband" target="_blank" rel="noopener">linktr.ee/twisteddragonband</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap"><span>Stage Garrett LLC d/b/a Twisted Dragon</span><span>Updated November 2026</span></div>
+</footer>
+
+<script>
+document.querySelectorAll('[data-copy]').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var el=document.getElementById(btn.getAttribute('data-copy'));
+    var text=el.textContent.trim();
+    function done(){var o=btn.textContent;btn.textContent='Copied';setTimeout(function(){btn.textContent=o},1600)}
+    function fallback(){var r=document.createRange();r.selectNodeContents(el);var s=window.getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Selected';setTimeout(function(){btn.textContent='Copy'},1600)}
+    try{navigator.clipboard.writeText(text).then(done,fallback)}catch(e){fallback()}
+  });
+});
+</script>
+
+</body>
+</html>
